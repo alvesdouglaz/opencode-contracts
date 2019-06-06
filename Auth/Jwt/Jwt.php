@@ -10,7 +10,7 @@
  * @version     1.0.0
  */
 
-namespace Opencode\Contracts\Auth\JWT
+namespace Opencode\Contracts\Auth\Jwt
 {
     /**
      * JSON Web Token (JWT)
@@ -19,7 +19,7 @@ namespace Opencode\Contracts\Auth\JWT
      * @author      Douglas Alves <https://github.com/alvesdouglaz/>
      * @since       1.0.0
      */
-    interface JWT
+    interface Jwt
     {
         /**
          * Receive the information, encoded and return the JWT token
