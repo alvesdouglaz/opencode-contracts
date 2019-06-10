@@ -22,6 +22,25 @@ namespace Opencode\Contracts\Auth\Access
      */
     interface CapabilityAcl
     {
-    }
+        /**
+         * CapabilityAcl constructor.
+         *
+         * @param string|null $name
+         */
+        public function __construct(string $name = null);
 
+        /**
+         * Return the capability name
+         *
+         * @return string
+         */
+        public function getName() : string;
+
+        /**
+         * Set the capability name
+         * @param string $name
+         * @return CapabilityAcl
+         */
+        public function setName(string $name) : CapabilityAcl;
+    }
 }

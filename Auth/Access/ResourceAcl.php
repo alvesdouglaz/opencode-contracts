@@ -22,6 +22,35 @@ namespace Opencode\Contracts\Auth\Access
      */
     interface ResourceAcl
     {
+        /**
+         * ResourceAcl constructor.
+         *
+         * @param string|null $name
+         * @param string|null $owner
+         */
+        public function __construct(string $name = null, string $owner = null);
+
+        /**
+         * @return string
+         */
+        public function getName() : string;
+
+        /**
+         * @param string $name
+         * @return ResourceAcl
+         */
+        public function setName(string $name) : ResourceAcl;
+
+        /**
+         * @return string
+         */
+        public function getOwner() : string;
+
+        /**
+         * @param string $owner
+         * @return ResourceAcl
+         */
+        public function setOwner(string $owner) : ResourceAcl;
     }
 
 }

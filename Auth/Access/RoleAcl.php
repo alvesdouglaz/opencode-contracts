@@ -22,5 +22,27 @@ namespace Opencode\Contracts\Auth\Access
      */
     interface RoleAcl
     {
+        /**
+         * RoleAcl constructor.
+         *
+         * @param string|null $name
+         * @return RoleAcl
+         */
+        public function __construct(string $name = null);
+
+        /**
+         * Add capabilities
+         *
+         * @param array $capabilities
+         * @return RoleAcl
+         */
+        public function addCapabilities(array $capabilities) : RoleAcl;
+
+        /**
+         * Return all capabilities
+         *
+         * @return array
+         */
+        public function capabilities() : array;
     }
 }
