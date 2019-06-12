@@ -25,7 +25,21 @@ namespace Opencode\Contracts\Auth\Access
 
         #region <<< Roles >>>
 
+        /**
+         * Set the role, parent and callback
+         *
+         * @param $name
+         * @param $parent
+         * @param null $callback
+         * @return Acl
+         */
         public function role($name, $parent, $callback = null) : Acl;
+
+        /**
+         * Return a array contains all roles
+         *
+         * @return array
+         */
         public function getRoles() : array;
 
         /**
@@ -50,6 +64,11 @@ namespace Opencode\Contracts\Auth\Access
          */
         public function resource($name, $class, array $capabilities = null) : Acl;
 
+        /**
+         * Return a array contains all resources
+         *
+         * @return array
+         */
         public function getResources() : array;
 
         /**
@@ -72,6 +91,12 @@ namespace Opencode\Contracts\Auth\Access
          * @return $this
          */
         public function capability(string $capability, $callback) : Acl;
+
+        /**
+         * Return a array contains all capabilities
+         *
+         * @return array
+         */
         public function getCapabilities() : array;
 
         /**
